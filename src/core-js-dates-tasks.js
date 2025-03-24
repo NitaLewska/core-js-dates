@@ -158,7 +158,7 @@ function isDateInPeriod(date, { start, end }) {
  */
 function formatDate(date) {
   const input = new Date(date);
-  const day = input.getDate();
+  const day = input.getUTCDate();
   const month = input.getUTCMonth() + 1;
   const year = input.getUTCFullYear();
   let hour = input.getUTCHours();
