@@ -65,8 +65,8 @@ The task is to implement functions on different Core JS topics. This module requ
 
 ## Notes
 
-- We recommend you to use nodejs of version 16 or lower. If you using any of features that does not supported by node `v16`, score won't be submitted.
-- Installing nodejs `v16` is optional, you can run jobs using your version and not use methods that are not in nodejs `v16`.
+- We recommend you to use nodejs of version 22 or lower. If you using any of features that does not supported by node `v22`, score won't be submitted.
+- Installing nodejs `v22` is optional, you can run jobs using your version and not use methods that are not in nodejs `v22`.
 - Please be sure that each of your test in limit of 30sec.
 - You will get 0 (zero) if you have any eslint's errors or warnings.
 
@@ -89,6 +89,9 @@ $ npm run lint:fix
 
 **Question:** Execution of tests "hangs" on one of them and does not display the result. What to do?<br>
 **Answer**: Check your solution for an infinite loop, fix it, and rerun the test.
+
+**Question:** The solution in the local repository succeeds and all tests are "green", but in the application some tests don't count. What to do?<br>
+**Answer**: The server is in a different time zone and your solution is not universal. Change the time zone on your local computer and run the tests again. For example, to UTC+5 and UTC-5. You will probably see that some of the tests did not complete successfully.
 
 **Question:** The solution in the local repository succeeds and all tests are "green", but in the application some tests don't count. What to do?<br>
 **Answer**: [Update your repository fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork), update the local repository from the fork, run tests and fix your solution. After fixing, resubmit your solution for testing.

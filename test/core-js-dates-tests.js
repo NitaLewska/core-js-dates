@@ -41,7 +41,7 @@ describe('core-js-dates', () => {
   );
 
   it.optional(
-    'getTime should returns the time in hh:mm:ss format from the received date',
+    'getTime should return the time in hh:mm:ss format from the received date',
     () => {
       assert.equal(tasks.getTime(new Date(2023, 5, 1, 8, 20, 55)), '08:20:55');
       assert.equal(
@@ -65,7 +65,7 @@ describe('core-js-dates', () => {
   );
 
   it.optional(
-    'getDayName should returns the name of the day of the week for the passed date',
+    'getDayName should return the name of the day of the week for the passed date',
     () => {
       assert.equal(tasks.getDayName('01 Jan 1970 00:00:00 UTC'), 'Thursday');
       assert.equal(tasks.getDayName('03 Dec 1995 00:12:00 UTC'), 'Sunday');
@@ -110,7 +110,7 @@ describe('core-js-dates', () => {
   );
 
   it.optional(
-    'getCountDaysInMonth should returns the number of days in a given month and year',
+    'getCountDaysInMonth should return the number of days in a given month and year',
     () => {
       assert.deepEqual(tasks.getCountDaysInMonth(1, 2024), 31);
       assert.deepEqual(tasks.getCountDaysInMonth(2, 2024), 29);
@@ -168,7 +168,7 @@ describe('core-js-dates', () => {
   );
 
   it.optional(
-    'isDateInPeriod should returns true if the date is within the range',
+    'isDateInPeriod should return true if the date is within the range',
     () => {
       assert.equal(
         tasks.isDateInPeriod('2024-02-01', {
@@ -286,7 +286,7 @@ describe('core-js-dates', () => {
   );
 
   it.optional(
-    'getCountWeekendsInMonth should returns the number of days off (weekends) in the month',
+    'getCountWeekendsInMonth should return the number of days off (weekends) in the month',
     () => {
       assert.equal(tasks.getCountWeekendsInMonth(5, 2022), 9);
       assert.equal(tasks.getCountWeekendsInMonth(12, 2023), 10);
@@ -313,16 +313,16 @@ describe('core-js-dates', () => {
       assert.equal(tasks.getWeekNumberByDate(new Date(2024, 0, 3)), 1);
       assert.equal(tasks.getWeekNumberByDate(new Date(2024, 0, 31)), 5);
       assert.equal(tasks.getWeekNumberByDate(new Date(2024, 1, 23)), 8);
-      assert.equal(tasks.getWeekNumberByDate(new Date(2023, 1, 23)), 9);
-      assert.equal(tasks.getWeekNumberByDate(new Date(2022, 2, 22)), 13);
-      assert.equal(tasks.getWeekNumberByDate(new Date(2021, 3, 21)), 17);
+      assert.equal(tasks.getWeekNumberByDate(new Date(2023, 1, 23)), 8);
+      assert.equal(tasks.getWeekNumberByDate(new Date(2022, 2, 22)), 12);
+      assert.equal(tasks.getWeekNumberByDate(new Date(2021, 3, 21)), 16);
       assert.equal(tasks.getWeekNumberByDate(new Date(2020, 4, 20)), 21);
       assert.equal(tasks.getWeekNumberByDate(new Date(2019, 5, 23)), 25);
       assert.equal(tasks.getWeekNumberByDate(new Date(2018, 6, 22)), 29);
-      assert.equal(tasks.getWeekNumberByDate(new Date(2017, 7, 21)), 35);
-      assert.equal(tasks.getWeekNumberByDate(new Date(2016, 8, 20)), 39);
+      assert.equal(tasks.getWeekNumberByDate(new Date(2017, 7, 21)), 34);
+      assert.equal(tasks.getWeekNumberByDate(new Date(2016, 8, 20)), 38);
       assert.equal(tasks.getWeekNumberByDate(new Date(2015, 9, 23)), 43);
-      assert.equal(tasks.getWeekNumberByDate(new Date(1950, 10, 22)), 48);
+      assert.equal(tasks.getWeekNumberByDate(new Date(1950, 10, 22)), 47);
       assert.equal(
         forbidden.isCommented(tasks.getWeekNumberByDate),
         false,
@@ -374,7 +374,7 @@ describe('core-js-dates', () => {
   );
 
   it.optional(
-    'getWorkSchedule should returns work schedule according to the specified parameters',
+    'getWorkSchedule should return work schedule according to the specified parameters',
     () => {
       assert.deepEqual(
         tasks.getWorkSchedule({ start: '01-01-2024', end: '15-01-2024' }, 1, 3),
